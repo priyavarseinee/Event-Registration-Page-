@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Event Registration</h1>
+    </header>
+    <main>
+        <form action="confirmation.html" method="get" class="registration-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required>
+
+            <label for="event">Select Event:</label>
+            <select id="event" name="event" required>
+                <option value="">--Choose an event--</option>
+                <option value="Tech Conference">Tech Conference</option>
+                <option value="Art Workshop">Art Workshop</option>
+                <option value="Music Festival">Music Festival</option>
+            </select>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Event Organization</p>
+    </footer>
+</body>
+</html>
