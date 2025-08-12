@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Registration Successful!</h1>
+    </header>
+    <main>
+        <p>Thank you for registering. Here are your details:</p>
+        <ul>
+            <li><strong>Name:</strong> <span id="confName"></span></li>
+            <li><strong>Email:</strong> <span id="confEmail"></span></li>
+            <li><strong>Phone:</strong> <span id="confPhone"></span></li>
+            <li><strong>Event:</strong> <span id="confEvent"></span></li>
+            <li><strong>Notes:</strong> <span id="confNotes"></span></li>
+        </ul>
+        <a href="register.html" class="back-btn">Register Another</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Event Organization</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("confName").textContent = params.get("name");
+        document.getElementById("confEmail").textContent = params.get("email");
+        document.getElementById("confPhone").textContent = params.get("phone");
+        document.getElementById("confEvent").textContent = params.get("event");
+        document.getElementById("confNotes").textContent = params.get("notes");
+    </script>
+</body>
+</html>
